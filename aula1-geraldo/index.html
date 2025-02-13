@@ -1,0 +1,80 @@
+<!-- Declaração do tipo de documento, indicando que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Definindo o idioma da página como português do Brasil -->
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo o conjunto de caracteres (UTF-8) para garantir que todos os caracteres sejam renderizados corretamente -->
+    <meta charset="UTF-8">
+    
+    <!-- Meta tag para garantir que a página seja responsiva, ajustando-se ao tamanho da tela do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página, exibido na aba do navegador -->
+    <title>Tudo Fácil</title>
+    
+    <!-- Link para o arquivo CSS externo, responsável pelo estilo da página -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <!-- Carregamento do arquivo JavaScript, com o atributo defer para garantir que o script seja carregado após o carregamento completo da página -->
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho da página, agora com a classe "nav" para ser estilizado como barra de navegação -->
+    <header class="nav">
+        <!-- Logo da página, com um link para a página inicial e a classe "logo" para estilização -->
+        <a href="/" class="logo">
+            <!-- Imagem da logo -->
+            <img src="img/logo.png" class="logo">
+        </a>
+        
+        <!-- Botão de hambúrguer, utilizado para exibir o menu em telas pequenas (responsivo) -->
+        <button class="hamburguer"></button>
+        
+        <!-- Lista de navegação com links para diferentes páginas -->
+        <ul class="nav-list">
+            <!-- Itens da lista de navegação, cada item é um link -->
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/">Sobre Nós</a></li>
+            <li><a href="/">Cadastrar-se</a></li>
+        </ul>
+
+
+        <div class="wrapper">
+            <form action="">
+                <h1> login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                
+                    <div class="remenber-forgot">
+                        <label ><input type="checkbox"> Remember Me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">login</button>
+                    <div class="register-link">
+                        <p> Dont have an account?<a href="#">Register</a></p>
+                    </div>
+              
+            </form>
+
+        </div>
+    </header>
+    
+    <!-- Seção principal da página, que pode ser usada para o conteúdo principal (aqui está vazia por enquanto) -->
+    <main class="hero"> </main>
+</body>
+
+</html>

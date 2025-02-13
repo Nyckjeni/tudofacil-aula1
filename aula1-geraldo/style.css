@@ -1,0 +1,212 @@
+/* Resetando margens e paddings para garantir um layout consistente em todos os navegadores */
+* {
+    margin: 0;    /* Remove margem de todos os elementos */
+    padding: 0;   /* Remove o padding (espaçamento interno) de todos os elementos */
+}
+
+/* Estilo para o corpo da página */
+body {
+    margin: 0;    /* Remove a margem do corpo da página */
+    line-height: 3.0;    /* Define o espaçamento entre as linhas do texto como 3x o tamanho da fonte */
+    background-image: url(/img/fundo.jpg);   /* Aplica uma imagem de fundo */
+    background-size: cover;   /* Faz com que a imagem de fundo cubra toda a tela, sem distorcer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+}
+
+.wrapper{
+    width: 420px;
+    background: #58a8f8;
+    color: #fff;
+
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    width: 50px;
+    height:50px;
+   
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px  45px 20px 20px;
+
+
+}
+
+.input-box input::placeholder{
+    color:#fff
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+
+
+}
+
+.wrapper .remenber-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+/* Estilo da barra de navegação */
+.nav {
+    background: #17A6FF;    /* Define a cor de fundo da barra de navegação como azul */
+    padding-inline: 16px;    /* Aplica 16px de padding nas laterais (esquerda e direita) da barra */
+    display: flex;           /* Usa flexbox para alinhar os itens da barra em linha */
+    justify-content: space-between;  /* Espaça os itens da barra (logo à esquerda e itens do menu à direita) */
+    align-items: center;     /* Alinha verticalmente os itens ao centro da barra */
+    height: 75px;            /* Define a altura da barra de navegação */
+}
+
+/* Centraliza a logo na barra */
+.nav .logo {
+    display: flex;           /* Usa flexbox para centralizar a logo */
+    justify-content: center; /* Centraliza a logo horizontalmente */
+    align-items: center;     /* Centraliza a logo verticalmente */
+    flex-grow: 1;            /* Faz a logo ocupar o espaço restante, centralizando-a */
+}
+
+/* Tamanho da imagem da logo */
+.logo img {
+    max-width: 200px;  /* Define a largura máxima da imagem como 200px */
+    height: auto;      /* Mantém a proporção da imagem, ajustando a altura automaticamente */
+}
+
+/* Estilo dos links no menu */
+a {
+    font-family: sans-serif;   /* Define a fonte dos links como sans-serif */
+    text-decoration: none;     /* Remove o sublinhado dos links */
+}
+
+/* Estilo da lista de navegação */
+.nav-list {
+    display: flex;         /* Exibe os itens de navegação lado a lado */
+    gap: 32px;             /* Espaçamento de 32px entre os itens da lista */
+    list-style: none;      /* Remove os marcadores da lista */
+}
+
+/* Estilo dos links dentro da lista de navegação */
+.nav-list a {
+    font-size: 18px;       /* Define o tamanho da fonte dos links como 18px */
+    color: white;          /* Define a cor do texto dos links como branca */
+    padding-block: 16px;   /* Aplica 16px de padding no topo e na parte inferior de cada link */
+}
+
+/* Estilo do botão de hambúrguer */
+.hamburguer {
+    display: none;          /* Esconde o hambúrguer por padrão (só aparece em telas pequenas) */
+    border: none;           /* Remove a borda do botão de hambúrguer */
+    background: none;       /* Remove o fundo do botão de hambúrguer */
+    border-top: 3px solid #fff;  /* Cria uma linha fina no topo do hambúrguer com cor branca */
+    cursor: pointer;       /* Altera o cursor para uma "mãozinha" ao passar sobre o hambúrguer */
+}
+
+/* Estilos das linhas do hambúrguer (antes e depois do botão) */
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";           /* Cria elementos vazios antes e depois do botão de hambúrguer */
+    display: block;         /* Faz com que esses elementos sejam blocos (expandam para preencher o espaço) */
+    width: 30px;            /* Define a largura das linhas do hambúrguer como 30px */
+    height: 3px;            /* Define a altura das linhas do hambúrguer como 3px */
+    background: #fff;       /* Define a cor das linhas como branca */
+    margin-top: 5px;        /* Aplica 5px de espaço entre as linhas */
+    position: relative;     /* Necessário para animar a posição e rotação das linhas */
+    transition: 0.3s;       /* Define a transição de animação suave para os itens */
+}
+
+/* Estilos para telas pequenas (menu hambúrguer aparece) */
+@media (max-width: 750px) {
+    .nav-list {
+        display: none;           /* Esconde o menu por padrão em telas pequenas */
+        position: fixed;         /* Posiciona o menu fixo na tela */
+        top: 0;                  /* Coloca o menu no topo da tela */
+        left: 0;                 /* Coloca o menu na lateral esquerda da tela */
+        width: 100vw;            /* Faz o menu ocupar toda a largura da tela */
+        height: 100vh;           /* Faz o menu ocupar toda a altura da tela */
+        background: #0477BE;     /* Define o fundo do menu como azul escuro */
+        flex-direction: column;  /* Exibe os itens do menu verticalmente */
+        justify-content: space-around;  /* Espaça os itens do menu de forma igual */
+        align-items: center;     /* Alinha os itens ao centro */
+        gap: 0;                  /* Remove qualquer espaçamento entre os itens */
+        opacity: 0;              /* Torna o menu invisível inicialmente */
+        pointer-events: none;    /* Impede a interação com o menu quando invisível */
+        clip-path: circle(100px at 90% -15%);  /* Aplica um efeito de círculo ao menu */
+        transition: 1s ease-out; /* Faz a animação do menu aparecer suavemente */
+    }
+
+    /* Quando o menu estiver ativo, ele será exibido */
+    .nav.active .nav-list {
+        display: flex;           /* Exibe os itens do menu de forma flexível */
+        opacity: 1;              /* Torna o menu visível */
+        pointer-events: auto;    /* Permite interações com os itens do menu */
+        clip-path: circle(1500px at 90% -15%);  /* Expande o menu com efeito de círculo */
+    }
+
+    /* Exibe o botão de hambúrguer apenas em telas pequenas */
+    .hamburguer {
+        display: block;   /* Exibe o botão de hambúrguer */
+    }
+}
+
+/* Estilos para telas grandes (menu tradicional sem hambúrguer) */
+@media (min-width: 751px) {
+    /* Esconde o botão de hambúrguer em telas grandes */
+    .hamburguer {
+        display: none;
+    }
+
+    /* Exibe a lista de navegação horizontalmente em telas grandes */
+    .nav-list {
+        display: flex;           /* Exibe os itens de navegação lado a lado */
+        opacity: 1;              /* Garante que os itens da lista sejam visíveis */
+        pointer-events: auto;    /* Permite interação com os itens do menu */
+    }
+}
+
+/* Estilos do menu ativo quando o botão de hambúrguer é clicado */
+.nav.active .nav-list {
+    opacity: 1;                          /* Garante que o menu tenha opacidade 1 (visível) */
+    clip-path: circle(1500px at 90% -15%);  /* Expande o menu ainda mais com efeito de círculo */
+}
+
+/* Estilos para o botão de hambúrguer quando o menu está ativo */
+.nav.active .hamburguer {
+    position: fixed;      /* Posiciona o botão de hambúrguer de forma fixa */
+    top: 26px;            /* Define a posição do hambúrguer a 26px do topo */
+    right: 16px;          /* Define a posição do hambúrguer a 16px da direita */
+    border-top-color: transparent;  /* Torna a linha superior do hambúrguer invisível */
+}
+
+/* Animação para a linha do hambúrguer antes do clique */
+.nav.active .hamburguer::before {
+    transform: rotate(135deg);  /* Rotaciona a linha superior para formar um "X" */
+}
+
+/* Animação para a linha do hambúrguer depois do clique */
+.nav.active .hamburguer::after {
+    transform: rotate(-135deg);  /* Rotaciona a linha inferior para formar um "X" */
+    top: -7px;                   /* Ajusta a posição da linha inferior para se sobrepor à superior */
+}
