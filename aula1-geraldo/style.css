@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +14,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
 }
+
 
 .header {
     display: flex;
@@ -24,10 +25,10 @@ body {
     background-color: rgb(57, 57, 188);
     padding: 10px 20px;
     color: white;
-
 }
 
-.logo  {
+
+.logo {
     max-width: 150px;
     margin: 0 auto;
 }
@@ -37,17 +38,20 @@ body {
     margin: 0 auto;
 }
 
+
 .menu ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
+
 .menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16 px;
+    font-size: 16px;
 }
+
 
 .login {
     display: flex;
@@ -55,12 +59,13 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image:  url(img/fundo.jpg);
+    background-image: url(img/fundo.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
 
 .login-form {
     background-color: rgba(26, 42, 62, 0.5);
@@ -70,20 +75,17 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
-
 }
 
 .login-form h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: aliceblue;
-
 }
 
 .input-group {
     margin-bottom: 20px;
     text-align: center;
-
 }
 
 .input-group label {
@@ -91,7 +93,6 @@ body {
     color: aliceblue;
     display: block;
     text-align: center;
-
 }
 
 .input-group input {
@@ -100,39 +101,77 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-top: 5px;
-
 }
 
-button{
+button {
     width: 100%;
     padding: 10px;
     background-color: #3636d0;
     color: white;
-    border:none;
+    border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #b5d9ff;;
+    background-color: #b5d9ff;
 }
 
 .reset-login p {
     color: white;
-    font-size: 16 px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
-.reset-login a{
+.reset-login a {
     color: #4f4fac;
     text-decoration: none;
     font-weight: bold;
 }
 
 .reset-login a:hover {
-    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+    text-decoration: underline;
     color: #b5d9ff;
 }
 
 
+
+
+.menu-hamburguer {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    
+    .login-form {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .login-form {
+        max-width: 95%;
+    }
+}

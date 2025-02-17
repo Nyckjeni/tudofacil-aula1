@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
     <title>Tudo Fácil</title>
 </head>
 <body>
-    <!-- MENU -->
+    
     <header class="header">
         <div class="logo">
             <img src="img/logo.png">
         </div>
         <nav class="menu">
-            <ul>
+            <div class="menu-hamburguer" id="hamburguer">
+                &#9776; 
+            </div>
+            <ul class="menu-items" id="menuItems">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="Cadastro.html">Cadastrar-se</a></li>
             </ul>
         </nav>
-       
-
     </header>
 
-    <!-- Área de Login -->
+    
     <section class="login">
-        <div class=login-form>
+        <div class="login-form">
             <h2>Login</h2>
             <form action="#">
                 <div class="input-group">
                     <label for="username">Nome do usuário</label>
-                    <input type="text" id="username" placeholder="Digite  seu nome de usuário" required>
+                    <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
                 </div>
 
                 <div class="input-group">
@@ -42,16 +42,15 @@
                     <p>Esqueceu sua senha?<a href="senha.html">Alterar senha</a></p>
                 </div>
 
-                <button type="submit"class="btn">Entrar</button>
+                <button type="submit" class="btn">Entrar</button>
 
                 <div class="reset-login">
                     <p>Não tem uma conta?<a href="cadastrar.html">Cadastrar-se</a></p>
                 </div>
-                
             </form>
-
         </div>
     </section>
+
     <script src="index.js"></script>
 </body>
 </html>
